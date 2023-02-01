@@ -35,6 +35,12 @@ export class UI{
             context.font = this.fontSize *1.5 + 'px ' +this.fontFamily;
             context.fillText('Great!!! Score ' + this.game.score,  this.game.width * 0.5, this.game.height * 0.5)
         }
+        
+        if(this.game.gameOver){
+            context.textAlign = 'center';
+            context.font = this.fontSize + 'px ' +this.fontFamily;
+            context.fillText('press F5 to restart',  this.game.width * 0.5, this.game.height -20)
+        }
         context.restore();
     }
 }
